@@ -6,6 +6,13 @@ Hand parsing is to extract a high-level description of the hand from the depth i
 Reference:
 [1] H. Liang, J. Yuan and D. Thalmann, Parsing the Hand in Depth Images, in IEEE Trans. Multimedia, Aug. 2014.
 
+opencv 文件夹中为相应的opencv依赖（opencv源码已经被修改）
+
+exe 文件夹中为可执行文件，在windows 10 x64环境下测试成功，相关依赖在opencv文件中。
+
+src 文件夹中为相应源文件
+
+
 训练模型在：http://pan.baidu.com/s/1i5AoA4t 
 
 运行环境：

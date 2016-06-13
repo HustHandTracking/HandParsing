@@ -24,7 +24,7 @@ FValue::~FValue()
 
 /*
     Input : Mar *metrix, M x M, M is odd.
-           metrix ÊÇÒ»¸ö2Í¨µÀµÄMatĞÍÊı¾İ£¬±£´æÁË²ÉÓÃ¾ØÕó 
+           metrix æ˜¯ä¸€ä¸ª2é€šé“çš„Matå‹æ•°æ®ï¼Œä¿å­˜äº†é‡‡ç”¨çŸ©é˜µ 
 	Output: None
     return:
 	       -2 The sample metrix`s rows should be equal to cols
@@ -123,18 +123,18 @@ void FValue::modify_sample_metrix(void)
 	{
 		for (int j = 0; j < col; j++)
 		{
-			float Xdelta = sample_metrix.at<Vec2f>(i, j)[0];  //Xdelta ÎªÊúÖ±·½ÏòµÄÆ«ÒÆ£¬¹ÊÎª (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
+			float Xdelta = sample_metrix.at<Vec2f>(i, j)[0];  //Xdelta ä¸ºç«–ç›´æ–¹å‘çš„åç§»ï¼Œæ•…ä¸º (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
 			Xdelta *= GRID_SIZE;
 			sample_metrix.at<Vec2f>(i,j)[0] =  Xdelta * zNear;
 
-			float Ydelta = sample_metrix.at<Vec2f>(i, j)[1];  //Xdelta ÎªÊúÖ±·½ÏòµÄÆ«ÒÆ£¬¹ÊÎª (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
+			float Ydelta = sample_metrix.at<Vec2f>(i, j)[1];  //Xdelta ä¸ºç«–ç›´æ–¹å‘çš„åç§»ï¼Œæ•…ä¸º (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
 			Ydelta *= GRID_SIZE;
 			sample_metrix.at<Vec2f>(i,j)[1] =  Ydelta * zNear;
 		}
 	}
 }
 
-/*¼ÆËãÊäÈëµãµÄÌØÕ÷Öµ,²ÉÑù¾ØÕó·´Ó³µÄÊÇÊµ¼ÊÆ«ÒÆ¾àÀë£¬ĞèÏÈ×ª»»ÎªÆ«ÒÆµÄ×ø±ê*/
+/*è®¡ç®—è¾“å…¥ç‚¹çš„ç‰¹å¾å€¼,é‡‡æ ·çŸ©é˜µåæ˜ çš„æ˜¯å®é™…åç§»è·ç¦»ï¼Œéœ€å…ˆè½¬æ¢ä¸ºåç§»çš„åæ ‡*/
 int FValue:: calcu_f_value(Mat *cur_frame, int& x, int& y, Mat& p_value,CvRTrees* rtree)
 {
 	int metrix_dim = sample_metrix.rows;
@@ -157,8 +157,8 @@ int FValue:: calcu_f_value(Mat *cur_frame, int& x, int& y, Mat& p_value,CvRTrees
 		int jCols = dim % metrix_dim;
 		//if (rtree->get_FeatureNum(dim))
 		{
-			float Xdelta = sample_metrix.at<Vec2f>(iRows, jCols)[0];  //Xdelta ÎªÊúÖ±·½ÏòµÄÆ«ÒÆ£¬¹ÊÎª (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
-			int Xnew = x + (int)(0.5 + Xdelta / z); //ËÄÉáÎåÈë
+			float Xdelta = sample_metrix.at<Vec2f>(iRows, jCols)[0];  //Xdelta ä¸ºç«–ç›´æ–¹å‘çš„åç§»ï¼Œæ•…ä¸º (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
+			int Xnew = x + (int)(0.5 + Xdelta / z); //å››èˆäº”å…¥
 
 			if (Xnew > height - 1)
 			{
@@ -169,7 +169,7 @@ int FValue:: calcu_f_value(Mat *cur_frame, int& x, int& y, Mat& p_value,CvRTrees
 				Xnew = 0;
 			}
 
-			float Ydelta = sample_metrix.at<Vec2f>(iRows, jCols)[1]; //Ydelta ÎªË®Æ½·½ÏòµÄÆ«ÒÆ
+			float Ydelta = sample_metrix.at<Vec2f>(iRows, jCols)[1]; //Ydelta ä¸ºæ°´å¹³æ–¹å‘çš„åç§»
 			int Ynew = y + (int)(0.5 + Ydelta / z);
 
 			if (Ynew > width - 1)

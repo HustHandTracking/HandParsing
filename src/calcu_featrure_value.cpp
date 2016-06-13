@@ -3,7 +3,7 @@
 #include "calcu_feature_value.h"
 
 
-/*¼ÆËãÊäÈëµãµÄÌØÕ÷Öµ,²ÉÑù¾ØÕó·´Ó³µÄÊÇÊµ¼ÊÆ«ÒÆ¾àÀë£¬ĞèÏÈ×ª»»ÎªÆ«ÒÆµÄ×ø±ê*/
+/*è®¡ç®—è¾“å…¥ç‚¹çš„ç‰¹å¾å€¼,é‡‡æ ·çŸ©é˜µåæ˜ çš„æ˜¯å®é™…åç§»è·ç¦»ï¼Œéœ€å…ˆè½¬æ¢ä¸ºåç§»çš„åæ ‡*/
 int calcu_f_value(Mat *cur_frame, Mat *sample_metrix, int x, int y, Mat* p_value)
 {
 	int metrix_dim = (*sample_metrix).rows;
@@ -22,9 +22,9 @@ int calcu_f_value(Mat *cur_frame, Mat *sample_metrix, int x, int y, Mat* p_value
 	{
 		for (int jCols = 0; jCols < metrix_dim; jCols++)
 		{
-			float Xdelta = (*sample_metrix).at<Vec2f>(iRows, jCols)[0];  //Xdelta ÎªÊúÖ±·½ÏòµÄÆ«ÒÆ£¬¹ÊÎª (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
+			float Xdelta = (*sample_metrix).at<Vec2f>(iRows, jCols)[0];  //Xdelta ä¸ºç«–ç›´æ–¹å‘çš„åç§»ï¼Œæ•…ä¸º (*sample_metrix).at<Vec2f>(iRows, jCols)[1]
 			Xdelta *= GRID_SIZE;
-			int Xnew = x + (int)(0.5 + Xdelta * zNear / z); //ËÄÉáÎåÈë
+			int Xnew = x + (int)(0.5 + Xdelta * zNear / z); //å››èˆäº”å…¥
 
 			if (Xnew > height - 1)
 			{
@@ -35,7 +35,7 @@ int calcu_f_value(Mat *cur_frame, Mat *sample_metrix, int x, int y, Mat* p_value
 				Xnew = 0;
 			}
 
-			float Ydelta = (*sample_metrix).at<Vec2f>(iRows, jCols)[1]; //Ydelta ÎªË®Æ½·½ÏòµÄÆ«ÒÆ
+			float Ydelta = (*sample_metrix).at<Vec2f>(iRows, jCols)[1]; //Ydelta ä¸ºæ°´å¹³æ–¹å‘çš„åç§»
 			Ydelta *= GRID_SIZE;
 			int Ynew = y + (int)(0.5 + Ydelta * zNear / z);
 			if (Ynew > width - 1)

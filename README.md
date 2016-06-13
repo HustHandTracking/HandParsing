@@ -15,7 +15,7 @@ src 文件夹中为相应源文件
 
 训练模型在：http://pan.baidu.com/s/1i5AoA4t 
 
-运行环境：
+运行环境(Windows 10 x64)：
 
     硬件：Intel RealSense F200/SR300
 

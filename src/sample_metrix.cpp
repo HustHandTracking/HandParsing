@@ -2,7 +2,7 @@
 
 /*
     Input : Mar *metrix, M x M, M is odd.
-           metrix ÊÇÒ»¸ö2Í¨µÀµÄMatĞÍÊı¾İ£¬±£´æÁË²ÉÓÃ¾ØÕó 
+           metrix æ˜¯ä¸€ä¸ª2é€šé“çš„Matå‹æ•°æ®ï¼Œä¿å­˜äº†é‡‡ç”¨çŸ©é˜µ 
 	Output: None
     return:
 	       -2 The sample metrix`s rows should be equal to cols

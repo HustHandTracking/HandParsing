@@ -17,4 +17,6 @@
 ![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_6.jpg)
 
 ###特征提取
-特征提取利用【1】中的差分特征-已当前点为中心，在其邻域内选择若干差分点，求差分点与当前点的深度值的差做为该点的特征。考虑到越近的点描述能力越强，差分点的选择是越靠近中心点越密集，如下图（左为差分点选择示意，右为某一维度上差分点分布概率）
+特征提取利用【1】中的差分特征-已当前点为中心，在其邻域内选择若干差分点，求差分点与当前点的深度值的差做为该点的特征。考虑到越近的点描述能力越强，差分点的选择是越靠近中心点越密集，下图中，左图为差分点选择示意,M为距离；右为某一维度上差分点分布概率。
+
+![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/%E5%B7%AE%E5%88%86%E7%82%B9%E9%80%89%E6%8B%A9.jpg)![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/%E5%B7%AE%E5%88%86%E7%82%B9%E6%A6%82%E7%8E%87.jpg)

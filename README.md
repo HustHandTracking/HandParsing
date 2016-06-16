@@ -9,10 +9,6 @@
   ![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_12.jpg)![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_6.jpg)
 
 
-
-##参考文献：
-[1] H. Liang, J. Yuan and D. Thalmann, Parsing the Hand in Depth Images, in IEEE Trans. Multimedia, Aug. 2014.
-
 ##运行：
 opencv 文件夹中为相应的opencv依赖（opencv源码已经被修改）
 
@@ -30,6 +26,11 @@ src 文件夹中为相应源文件
     软件：opencv2.4.11（其中Random Forest 已经被修改过，请直接利用已经上传的opencv相关文件）
         
 有任何问题发邮件至 chenxihust@hust.edu.cn
+
+
+##参考文献：
+[1] H. Liang, J. Yuan and D. Thalmann, Parsing the Hand in Depth Images, in IEEE Trans. Multimedia, Aug. 2014.
+
 
 ##组员：
 陈希（chenxihust@hust.edu.cn）

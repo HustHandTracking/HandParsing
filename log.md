@@ -8,3 +8,5 @@
   
   ![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_12.jpg)![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_6.jpg)
 
+#算法流程
+![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B.jpg)

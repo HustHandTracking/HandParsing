@@ -5,6 +5,7 @@ HandParsing
 说明
 
   在【1】中作者将手分为12个部分(左图)，为实现简单，本项目中将手分为6个部分（右图）,下图中不同的颜色代表不同的分类。
+  
   ![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_12.jpg)![image](https://github.com/HustHandTracking/HandParsing/blob/master/img/HandParsing_6.jpg)
 
 
